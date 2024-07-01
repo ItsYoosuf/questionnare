@@ -1,0 +1,59 @@
+#options {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; /* make it span the full height of the page */
+    width: 11rem; /* adjust the width as needed */
+    display: flex;
+    flex-direction: column; /* stack the items vertically */
+    justify-content: start; /* align items to the start of the container */
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #options a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem;
+  }
+  
+  #options a:hover {
+    color: #ccc;
+  }
+  
+  .active {
+    color: #ccc;
+  }
+  
+  .butn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .butn:hover {
+    background-color: #444;
+  }
+  .img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px; /* equivalent to 50px */
+    height: auto; /* equivalent to 50px */
+  }
+  @media (max-width: 768px) {
+    #options {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    #options a {
+      margin: 0.5rem 0;
+    }
+  }
