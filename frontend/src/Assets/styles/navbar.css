@@ -1,59 +1,58 @@
 #options {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%; /* make it span the full height of the page */
-    width: 11rem; /* adjust the width as needed */
-    display: flex;
-    flex-direction: column; /* stack the items vertically */
-    justify-content: start; /* align items to the start of the container */
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2.25rem); /* span the full width of the page */
+  height: 60px; /* adjust the height as needed */
+  display: flex;
+  flex-direction: row; /* align items horizontally */
+  justify-content: space-between; /* space between the icon and links */
+  align-items: center; /* center items vertically */
+  padding: 0 1.25rem 0 1rem; /* adjust padding as needed */
+  background-color: #00533F; /* updated background color */
+  color: #fff;
+}
+
+.butn {
+  background-color: transparent; /* make button background transparent */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.butn:hover {
+  background-color: #00402e; /* darker shade for hover effect */
+  border-radius: 1rem;
+}
+.auth-btn {
+  background-color: white; /* Set background to white */
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 0 .5rem;
+  /* Add other necessary styling here */
+}
+
+.auth-btn:hover {
+  background-color: #96b2cf; /* Off-white color on hover */
+}
+.icon {
+  position: relative; /* adjust if needed */
+  width: 50px; /* icon width */
+  height: auto; /* maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  #options {
+      flex-direction: column;
+      align-items: center;
   }
   
   #options a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0.5rem;
-  }
-  
-  #options a:hover {
-    color: #ccc;
-  }
-  
-  .active {
-    color: #ccc;
-  }
-  
-  .butn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .butn:hover {
-    background-color: #444;
-  }
-  .img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px; /* equivalent to 50px */
-    height: auto; /* equivalent to 50px */
-  }
-  @media (max-width: 768px) {
-    #options {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    #options a {
       margin: 0.5rem 0;
-    }
   }
+}

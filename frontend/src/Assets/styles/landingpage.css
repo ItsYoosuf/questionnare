@@ -1,0 +1,7 @@
+img {
+    width: 100%; /* Uses the full width of its parent element */
+    height: 60vh; /* Uses 40% of the viewport height */
+    display: block; /* Ensures the image is block level to apply width correctly */
+    margin: 0 auto; /* Centers the image horizontally */
+    object-fit: cover; /* Ensures the image covers the area without losing its aspect ratio */
+}
