@@ -1,0 +1,26 @@
+/* Events.css */
+.events-container {
+    margin-left: 50%;
+    background-color: white;
+    padding-left: 15px; /* Align with NewsSection's indentation */
+}
+
+.events-name {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.events-container .event {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 2vh;
+}
+
+.events-container h3 {
+    font-size: 1rem;
+    margin: 0; /* Remove margin for tighter spacing if needed */
+}
+
+.events-container p {
+    font-size: 0.8rem;
+}

@@ -1,0 +1,26 @@
+/* NewsSection.css */
+.news-section{
+    background-color: aliceblue;
+}
+.news-section .news-item {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 2vh;
+}
+
+.news-section .icon-placeholder {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    margin-right: 10px; /* Add margin to the right of the icon */
+}
+
+.news-section h6 {
+    font-size: 1rem;
+    margin: 0; /* Remove margin for tighter spacing if needed */
+}
+
+.news-section p {
+    font-size: 0.8rem;
+}

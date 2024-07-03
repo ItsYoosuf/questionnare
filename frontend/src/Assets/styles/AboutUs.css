@@ -1,0 +1,28 @@
+/* AboutUs.css */
+.about-us-section {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -7.5vh;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.about-us-section h3 {
+    color: #00533F;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.about-us-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-us-img {
+    width: calc(33.333% - 20px);
+    height: auto;
+    object-fit: cover;
+}
