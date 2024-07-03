@@ -16,11 +16,12 @@
     margin-right: 10px; /* Add margin to the right of the icon */
 }
 
-.news-section h6 {
-    font-size: 1rem;
-    margin: 0; /* Remove margin for tighter spacing if needed */
+.news-section h4 {
+    color: #00533F;
+    text-align: left;
+    margin-left: 15px;
+    padding-bottom: 15px;
 }
-
 .news-section p {
     font-size: 0.8rem;
 }

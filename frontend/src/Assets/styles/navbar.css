@@ -4,7 +4,7 @@
   left: 0;
   width: 100%; /* span the full width of the page */
   height: 60px; /* adjust the height as needed */
-  z-index: 1000;
+  z-index: 1000;  
   display: flex;
   flex-direction: row; /* align items horizontally */
   justify-content: space-between; /* space between the icon and links */

@@ -20,7 +20,8 @@ function NewsSection() {
 
   return (
     <section className="news-section mt-5">
-      <div className="container">
+      <div className="container my-5">
+      <h4>News</h4>
         <div className="row">
           {newsItems.map((item) => (
             <div key={item.id} className="col-md-6">

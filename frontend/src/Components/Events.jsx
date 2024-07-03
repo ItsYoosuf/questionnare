@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Assets/styles/Events.css';
+
 function Events() {
   const [events, setEvents] = useState([]);
 
@@ -14,14 +15,22 @@ function Events() {
   }, []);
 
   return (
-    <div className="events-container">
-      {events.map(event => (
-        <div key={event.id} className="event">
-          <h3>{event.name}</h3>
-          <p>{event.day}, {new Date(event.date).toLocaleDateString()}</p>
-        </div>
-      ))}
-    </div>
+    <section className="events-section mt-5">
+      <div className="container my-5">
+        <h4>Upcoming Events</h4>
+          {events.map(event => (
+            <div key={event.id} className="col-md-6">
+              <div className="event-item">
+                <i className="icon-placeholder"></i>
+                <div>
+                  <h6>{event.name}</h6>
+                  <p>{event.day}, {new Date(event.date).toLocaleDateString()}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+      </div>
+    </section>
   );
 }
 
