@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 2.25rem); /* span the full width of the page */
+  width: 100%; /* span the full width of the page */
   height: 60px; /* adjust the height as needed */
   display: flex;
   flex-direction: row; /* align items horizontally */

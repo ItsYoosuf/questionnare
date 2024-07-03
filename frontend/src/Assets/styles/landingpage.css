@@ -1,7 +1,49 @@
+
 img {
     width: 100%; /* Uses the full width of its parent element */
     height: 60vh; /* Uses 40% of the viewport height */
     display: block; /* Ensures the image is block level to apply width correctly */
     margin: 0 auto; /* Centers the image horizontally */
     object-fit: cover; /* Ensures the image covers the area without losing its aspect ratio */
+}
+.about-us-section {
+    position: absolute;
+    width: 80%; /* Adjust the width as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    margin-top: -7.5vh; /* Adjust based on desired overlap */
+    background-color: white;
+    border: 2px solid black;
+    /* Ensure it has a specified width */
+}
+.about-us-section h3 {
+    color: #00533F;
+    text-align: left; /* Aligns the text to the left */
+    margin-left: 15px; /* Adds some space from the left edge of the container */
+}
+.about-us-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between images as needed */
+}
+
+.about-us-img {
+    width: calc(33.333% - 20px); /* Adjust width to account for the gap */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area of the div without losing aspect ratio */
+}
+.news-section .icon-placeholder {
+    display: inline-block;
+    width: 50px; /* Adjust based on your icon size */
+    height: 50px; /* Adjust based on your icon size */
+    background-color: #ddd; /* Placeholder styling, replace with actual icons */
+    margin-bottom: 10px;
+}
+
+.news-section h6 {
+    font-size: 1rem; /* Smallest size heading */
+}
+
+.news-section p {
+    font-size: 0.8rem; /* Small paragraph */
 }
