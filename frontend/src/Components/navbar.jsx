@@ -1,25 +1,42 @@
 import React from 'react';
-import { Fragment } from 'react';
-import '../Assets/styles/navbar.css';
-
+import { Link } from 'react-router-dom';
+import '../Assets/styles/navbar.css'
 const Navbar = () => {
   return (
-    <Fragment>
-      <nav id="options">
-        <div id='logo-container'>       
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Logo</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about-us">About Us</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/news">News</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/events">Events</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/gallery">Gallery</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/certificates">Certificates</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
+          <form className="d-flex">
+            <button className="btn btn-outline-success me-2" type="submit">Sign Up</button>
+            <button className="btn btn-outline-success" type="submit">Login</button>
+          </form>
         </div>
-        <div id='butn-container'>
-          <button type='button' className='butn'>About Us</button>
-          <button type='button' className='butn'>News</button>
-          <button type='button' className='butn'>Events</button>
-          <button type='button' className='butn'>Gallery</button>
-          <button type='button' className='butn'>Certificates</button>
-          <button type='button' className='butn'>Contact</button>
-          <button type='button' className='auth-btn'>Sign Up</button>
-          <button type='button' className='auth-btn'>Login</button>
-        </div>
-      </nav>
-    </Fragment>
+      </div>
+    </nav>
   );
 };
 

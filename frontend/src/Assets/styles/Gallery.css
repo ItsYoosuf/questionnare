@@ -1,0 +1,35 @@
+/* Gallery.css */
+.gallery-section {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.gallery-section h2, .gallery-section h3 {
+    color: #00533F;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.gallery-img, .gallery-video {
+    width: calc(33.333% - 20px);
+    height: auto;
+    object-fit: cover;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery-img, .gallery-video {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-img, .gallery-video {
+        width: 100%;
+    }
+}
