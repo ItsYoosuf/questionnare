@@ -1,14 +1,19 @@
 import React from 'react';
 import './App.css';
-import LandingPage from './Components/landingpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+import LandingPage from './Components/landingpage';
+import Signup from './Components/Signup'; // Import the Signup component
+import LoginPage from './Components/LoginPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes along with BrowserRouter and Route
 
 function App() {
   return (
-    <Router> {/* Wrap your application in the Router component */}
+    <Router>
       <div className="App">
-        <LandingPage /> {/* Add the Landing Page component */}
+        <Routes> {/* Wrap Route components with Routes */}
+          <Route path="/" element={<LandingPage />} /> {/* Adjusted for react-router-dom v6 syntax */}
+          <Route path="/signup" element={<Signup />} /> {/* Adjusted for react-router-dom v6 syntax */}
+        </Routes>
       </div>
     </Router>
   );

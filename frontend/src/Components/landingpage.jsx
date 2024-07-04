@@ -7,6 +7,7 @@ import Events from './Events'; // Import Events component
 import Gallery from './Gallery'; // Import Gallery component
 import bgimg from '../Assets/images/bgimg.jpg';
 import '../Assets/styles/landingpage.css';
+import Footer from './footer';
 
 function LandingPage() {
   return (
@@ -18,6 +19,7 @@ function LandingPage() {
       <NewsSection /> {/* Use NewsSection component */}
       <Events/>
       <Gallery/>
+      <Footer />
     </div>
   );
 }

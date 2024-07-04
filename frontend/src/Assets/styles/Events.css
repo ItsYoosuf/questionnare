@@ -1,28 +1,38 @@
-/* Events.css */
+/* Adjust the overall section padding and alignment */
 .events-section {
-    
-    background-color:beige;
-    padding-left: 15px; /* Align with NewsSection's indentation */
+    background-color: beige;
+    padding: 15px;
+    text-align: left;
 }
 
-.events-name {
+/* Style for event names */
+.event-item h6 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Adjust as needed */
 }
 
-.events-section .event {
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
-    margin-bottom: 2vh;
+/* Style for the event details container */
+.event-item {
+    display: block; /* Ensure it takes the full width */
+    margin-bottom: 20px; /* Space between event items */
+    padding-left: 2vh;
 }
 
+/* Style adjustments for the event date and day */
+.event-item p {
+    font-size: 0.8rem;
+    margin-left: 0; /* Adjust based on your layout */
+}
+
+/* Heading and overall alignment */
 .events-section h4 {
     color: #00533F;
     text-align: left;
-    margin-left: 15px;
-    padding-bottom: 15px;
+    margin-bottom: 15px; /* Space below the heading */
 }
 
-.events-section p {
-    font-size: 0.8rem;
+/* Ensure consistent margin and padding */
+.events-section .col-md-6 {
+    padding: 0;
+    margin: 0;
 }

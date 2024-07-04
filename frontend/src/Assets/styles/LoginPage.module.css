@@ -1,0 +1,204 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: hidden;
+}
+.rectangle20 {
+  position: absolute;
+  left: 290px;
+  top: 209px;
+  width: 860px;
+  height: 606px;
+  background-color: #f3f7f6;
+  box-shadow: 0px 4px 15px 0px #00000040;
+}
+.rectangle21 {
+  position: absolute;
+  left: 290px;
+  top: 209px;
+  width: 430px;
+  height: 606px;
+  background-color: #00533f;
+}
+.frame6 {
+  position: absolute;
+  left: 366px;
+  top: 394px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.welcomeBack {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.curabiturVariusBlanditLoremQui {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 265px;
+  height: min-content;
+  flex-direction: column;
+}
+.orCreateAnAccount {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.group16 {
+  position: relative;
+  width: 124px;
+  height: 45px;
+}
+.rectangle26 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 124px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.signUp {
+  color: #00533f;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 19.3548%;
+  right: 19.3548%;
+  top: 24.4444%;
+  bottom: 22.2222%;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.rectangle23 {
+  position: absolute;
+  left: 801px;
+  top: 483px;
+  width: 280px;
+  height: 39px;
+  background-color: #d9d9d9;
+}
+.email {
+  color: #00000057;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 812px;
+  top: 491px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.rectangle24 {
+  position: absolute;
+  left: 801px;
+  top: 550px;
+  width: 280px;
+  height: 39px;
+  background-color: #d9d9d9;
+}
+.password {
+  color: #00000057;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 812px;
+  top: 558px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.rectangle262 {
+  position: absolute;
+  left: 879px;
+  top: 651px;
+  width: 124px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #00533f;
+}
+.login {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 913px;
+  top: 662px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.login2 {
+  color: #00533f;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 892px;
+  top: 327px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.forgotPassword {
+  color: #00000094;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 850px;
+  top: 594px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.frame11 {
+  position: absolute;
+  left: 1346px;
+  top: 945px;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  overflow: hidden;
+}

@@ -2,32 +2,29 @@
 .gallery-section {
     position: relative;
     width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: white;
     border: 2px solid black;
-    padding: 20px;
+    padding: 20px; /* Ensure this padding matches or is harmonious with the .about-us-section */
 }
-
 .gallery-section h2, .gallery-section h3 {
     color: #00533F;
     text-align: left;
     margin-left: 15px;
+    margin-bottom: 30px; /* Increased bottom margin for more space between heading and contents */
 }
-
 .gallery-img, .gallery-video {
-    width: calc(33.333% - 20px);
+    width: calc(40%- 20px);
     height: auto;
     object-fit: cover;
+    margin-bottom: 20px; /* Added bottom margin for space between two rows */
+    margin-right: 10px; /* Added right margin for space between items */
 }
-
-/* Adjustments for smaller screens */
+/* Adjustments for smaller screens, already responsive */
 @media (max-width: 768px) {
     .gallery-img, .gallery-video {
         width: calc(50% - 20px);
     }
 }
-
 @media (max-width: 576px) {
     .gallery-img, .gallery-video {
         width: 100%;

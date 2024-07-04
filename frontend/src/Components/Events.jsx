@@ -21,7 +21,6 @@ function Events() {
           {events.map(event => (
             <div key={event.id} className="col-md-6">
               <div className="event-item">
-                <i className="icon-placeholder"></i>
                 <div>
                   <h6>{event.name}</h6>
                   <p>{event.day}, {new Date(event.date).toLocaleDateString()}</p>
