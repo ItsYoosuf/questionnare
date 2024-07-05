@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from './Components/landingpage';
 import Signup from './Components/Signup'; // Import the Signup component
-import LoginPage from './Components/LoginPage';
+import Register from './Components/register'; // Import the Register component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes along with BrowserRouter and Route
 
 function App() {
