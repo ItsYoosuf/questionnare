@@ -32,7 +32,7 @@ const Navbar = () => {
           </ul>
             <form className="d-flex">
               <Link to="/signup" className="btn btn-outline-success me-2">Sign Up</Link>
-              <Link to="/login" className="btn btn-outline-success">Login</Link>
+              <Link to="/signin" className="btn btn-outline-success">Login</Link>
             </form>
         </div>
       </div>

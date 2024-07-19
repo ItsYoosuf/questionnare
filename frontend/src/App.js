@@ -11,7 +11,8 @@ function App() {
       <div className="App">
         <Routes> {/* Wrap Route components with Routes */}
           <Route path="/" element={<LandingPage />} /> {/* Adjusted for react-router-dom v6 syntax */}
-          <Route path="/signup" element={<Signup />} /> {/* Adjusted for react-router-dom v6 syntax */}
+          <Route path="/signin" element={<Signup />} /> {/* Adjusted for react-router-dom v6 syntax */}
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </Router>
