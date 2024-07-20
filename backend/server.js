@@ -1,16 +1,13 @@
-import express, { json } from 'express';
-import { connect } from 'mongoose';
-import newsRoutes from './routes/newsRoutes';
-
+import express from 'express';
+import cors from 'cors'; // Import cors
+import './db.js';
+// Adjust the import to match the new export format and ensure the path is correct
+import { getNewsItems } from './Controllers/NewsSection.js'; // Adjust the path as necessary
+import { getEvents } from './Controllers/Events.js';
 const app = express();
-
-// Connect to MongoDB
-connect('your_mongodb_connection_string', { useNewUrlParser: true, useUnifiedTopology: true });
-
-app.use(json());
-app.use('/api', newsRoutes);
-
-router.get('/news', newsController.getNewsItems);
+app.use(cors());
 
 const PORT = process.env.PORT || 3001;
+app.get('/api/news', getNewsItems);
+app.get('/api/events', getEvents);
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
