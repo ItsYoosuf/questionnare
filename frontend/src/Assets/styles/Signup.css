@@ -168,6 +168,7 @@ p {
 }
 .auth-overlay-panel button {
   border: #FFF 2px solid;
+  margin-top: .75rem;
   background-color: transparent;
 } 
 .auth-overlay-panel button:hover {

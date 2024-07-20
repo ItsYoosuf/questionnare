@@ -21,15 +21,14 @@ function Events() {
   
 
   return (
-    <section className="events-section mt-5">
+    <section className="events-section my-5">
       <div className="container my-5">
         <h4>Upcoming Events</h4>
           {events.map(event => (
             <div key={event._id} className="col-md-6">
               <div className="event-item">
                 <div>
-                  <h6>{event.name}</h6>
-                  <p>{event.day}, {new Date(event.date).toLocaleDateString()}</p>
+                  <p>{`${new Date(event.date).toLocaleString('default', { month: 'long' })} ${new Date(event.date).getDate()}: ${event.name}`}</p>
                 </div>
               </div>
             </div>

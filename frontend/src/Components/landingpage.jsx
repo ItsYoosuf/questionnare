@@ -9,6 +9,7 @@ import bgimg from '../Assets/images/bgimg.jpg';
 import '../Assets/styles/landingpage.css';
 import Footer from './footer';
 
+
 function LandingPage() {
   return (
     <div className='landpage'>

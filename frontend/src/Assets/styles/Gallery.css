@@ -1,32 +1,56 @@
 /* Gallery.css */
+
+/* General Styles */
 .gallery-section {
-    position: relative;
-    width: 80%;
-    background-color: white;
-    border: 2px solid black;
-    padding: 20px; /* Ensure this padding matches or is harmonious with the .about-us-section */
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 2rem 0; /* Top and bottom padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-.gallery-section h2, .gallery-section h3 {
-    color: #00533F;
-    text-align: left;
-    margin-left: 15px;
-    margin-bottom: 30px; /* Increased bottom margin for more space between heading and contents */
+
+/* Heading Styles */
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem; /* Larger font size for main heading */
+    color: #343a40; /* Dark color for contrast */
 }
-.gallery-img, .gallery-video {
-    width: calc(40%- 20px);
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 20px; /* Added bottom margin for space between two rows */
-    margin-right: 10px; /* Added right margin for space between items */
+
+.gallery-section h3 {
+    margin-top: 2rem; /* Space above section headings */
+    margin-bottom: 1rem; /* Space below section headings */
+    font-size: 1.75rem; /* Slightly larger font size for subheadings */
+    color: #495057; /* Darker color for subheadings */
 }
-/* Adjustments for smaller screens, already responsive */
+
+/* Image Styles */
+.gallery-img {
+    border-radius: 0.5rem; /* Rounded corners for images */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Video Player Styles */
+.video-js {
+    width: 100%; /* Full width for responsive design */
+    border-radius: 0.5rem; /* Rounded corners for video player */
+    margin-bottom: 1rem; /* Space below video player */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .gallery-img, .gallery-video {
-        width: calc(50% - 20px);
+    .gallery-section {
+        padding: 1rem; /* Less padding on smaller screens */
     }
-}
-@media (max-width: 576px) {
-    .gallery-img, .gallery-video {
-        width: 100%;
+
+    .gallery-section h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    .gallery-section h3 {
+        font-size: 1.5rem; /* Smaller subheading on mobile */
     }
 }

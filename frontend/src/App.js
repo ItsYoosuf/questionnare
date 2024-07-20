@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { UserProvider } from './Contexts/Usercontext';
 import LandingPage from './Components/landingpage';
 import Signup from './Components/Signup'; // Import the Signup component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes along with BrowserRouter and Route
 
 function App() {
   return (
+    <UserProvider>
     <Router>
       <div className="App">
         <Routes> {/* Wrap Route components with Routes */}
@@ -16,6 +18,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </UserProvider>
   );
 }
 

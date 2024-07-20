@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import bgimg from '../Assets/images/bgimg.jpg';
 import video1 from '../Assets/images/Video.mov';
-// Import Bootstrap CSS in your project entry file or here if it's not globally imported
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'video.js/dist/video-js.css'; // Import Video.js CSS
+import videojs from 'video.js'; // Import Video.js
 import '../Assets/styles/Gallery.css';
 
 function Gallery() {
@@ -24,6 +24,25 @@ function Gallery() {
     };
     setGalleryItems(fetchedGalleryItems);
   }, []);
+  useEffect(() => {
+    const players = [];
+    galleryItems.videos.forEach((video) => {
+      const player = videojs(`video-${video.id}`, {}, () => {
+        console.log('Player is ready');
+      });
+      players.push(player);
+    });
+  
+    return () => {
+      // Dispose of players on component unmount
+      players.forEach((player) => {
+        if (player) {
+          player.dispose();
+        }
+      });
+    };
+  }, [galleryItems.videos]);
+  
 
   return (
     <div className="gallery-section container my-5">
@@ -40,10 +59,19 @@ function Gallery() {
         <h3>Videos</h3>
         {galleryItems.videos.map((video) => (
           <div key={video.id} className="col-md-4 col-sm-6 col-xs-12">
-            <video controls className="img-fluid gallery-video">
-              <source src={video.url} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>  
+            <div data-vjs-player>
+              <video
+                id={`video-${video.id}`}
+                className="video-js vjs-default-skin"
+                controls
+                preload="auto"
+                width="640"
+                height="264"
+              >
+                <source src={video.url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         ))}
       </div>

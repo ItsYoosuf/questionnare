@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook instead of useHistory
 import '../Assets/styles/Signup.css';
 
-const AuthenticationForm = () => {
+const AuthenticationForm= () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,6 +13,10 @@ const AuthenticationForm = () => {
     setIsSignUp(!isSignUp);
   };
 
+  const handleBack = () => {
+    navigate('/'); // Navigate to homepage
+  };
+
   useEffect(() => {
     // This effect uses the navigate function to change the URL
     // based on the isSignUp state without reloading the component.
@@ -21,8 +25,8 @@ const AuthenticationForm = () => {
   }, [isSignUp, navigate]); // Depend on isSignUp and navigate
 
   
-  const correctEmail = "user@example.com";
-  const correctPassword = "password123";
+  const correctEmail = "u@g.com";
+  const correctPassword = "123";
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -86,11 +90,13 @@ const AuthenticationForm = () => {
             <h1>Welcome Back!</h1>
             <p>To keep connected with us please login with your personal info</p>
             <button onClick={toggleForm}>Sign In</button>
+            <button onClick={handleBack} className="back-button">Back</button> {/* Back button */}
           </div>
           <div className="auth-overlay-panel auth-overlay-right">
             <h1>Hello, Friend!</h1>
             <p>Enter your personal details and start journey with us</p>
             <button onClick={toggleForm}>Sign Up</button>
+            <button onClick={handleBack} className="back-button">Back</button> {/* Back button */}
           </div>
         </div>
       </div>

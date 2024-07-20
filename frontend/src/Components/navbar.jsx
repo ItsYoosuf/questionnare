@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../Contexts/Usercontext';
 import '../Assets/styles/navbar.css'
 const Navbar = () => {
+  const { user } = useContext(UserContext); // Access user context
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -30,10 +32,18 @@ const Navbar = () => {
               <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
-            <form className="d-flex">
-              <Link to="/signup" className="btn btn-outline-success me-2">Sign Up</Link>
-              <Link to="/signin" className="btn btn-outline-success">Login</Link>
-            </form>
+          <div className="navbar-links">
+          {user ? (
+            <div className="user-info">
+              <span>Welcome, {user.name}</span>
+              <button className="btn btn-outline-success">Sign Out</button>
+            </div>
+          ) : (
+            <div className="auth-links">
+              <Link to="/signup" className="btn btn-outline-success">Sign Up</Link>
+            </div>
+          )}
+        </div>
         </div>
       </div>
     </nav>
