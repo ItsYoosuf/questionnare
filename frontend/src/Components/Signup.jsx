@@ -1,16 +1,18 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook instead of useHistory
+import { UserContext } from '../Contexts/Usercontext'; // Import UserContexts
 import axios from 'axios'; // Import axios
 import '../Assets/styles/Signup.css';
 
 const AuthenticationForm= () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate hook
-
+  const { setUser } = useContext(UserContext);
    // Step 1: Create state for form fields
    const [formData, setFormData] = useState({
     name: '',
     email: '',
+    role: '',
     password: '',
   });
   
@@ -52,7 +54,8 @@ const AuthenticationForm= () => {
   
           console.log(isSignUp ? 'Account created successfully' : 'Signed in successfully', response.data);
           // Handle success (e.g., redirect to dashboard or display success message)
-          navigate('/'); // Adjust the navigation path as needed
+          setUser(response.data.user) // Set user context with response data
+          navigate('/courses'); // Adjust the navigation path as needed
       } catch (error) {
           console.error(isSignUp ? 'Error creating account' : 'Error signing in', error);
       }
@@ -80,9 +83,9 @@ const AuthenticationForm= () => {
       <form onSubmit={handleSubmit} autoComplete='off'>
           <h1>Create Account</h1>
           <div className="auth-social-container">
-            <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-            <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+            <a className="social"><i className="fab fa-facebook-f"></i></a>
+            <a className="social"><i className="fab fa-google-plus-g"></i></a>
+            <a className="social"><i className="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use your email for registration</span>
           <div className="auth-infield">
@@ -104,9 +107,9 @@ const AuthenticationForm= () => {
       <form onSubmit={handleSubmit} autoComplete='off'>
           <h1>Sign in</h1>
           <div className="auth-social-container">
-            <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-            <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+            <a className="social"><i className="fab fa-facebook-f"></i></a>
+            <a className="social"><i className="fab fa-google-plus-g"></i></a>
+            <a className="social"><i className="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use your account</span>
           <div className="auth-infield">
@@ -125,7 +128,7 @@ const AuthenticationForm= () => {
           <input type="password" placeholder="Password" name="password" value={formData.password} onChange={handleChange} />
             <label></label>
           </div>
-          <a href="#" className="forgot">Forgot your password?</a>
+          <a className="forgot">Forgot your password?</a>
           <button>Sign In</button>
         </form>
       </div>

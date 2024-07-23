@@ -47,14 +47,15 @@ export async function signIn(req, res) {
         id: user.id
       }
     };
-    console.log(payload);
+    //console.log(payload);
     jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
+      console.log(token);
       if (err) throw err;
-      res.status(200).json({ msg: 'Logged in successfully', token });
+      res.status(200).json({ msg: 'Logged in successfully', token, user });
     });
     
   } catch (error) {
-    res.status(500).json({ msg: 'Server error' });
+    res.status(500).json({ msg: 'Server error aan' });
   }
 }
 

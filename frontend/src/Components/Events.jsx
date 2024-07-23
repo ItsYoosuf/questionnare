@@ -21,7 +21,7 @@ function Events() {
   
 
   return (
-    <section className="events-section my-5">
+    <section className="events-section my-5" id='events-section'>
       <div className="container my-5">
         <h4>Upcoming Events</h4>
           {events.map(event => (

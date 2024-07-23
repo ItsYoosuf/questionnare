@@ -22,6 +22,17 @@
   border-radius: 1rem; /* Rounded corners on hover */
   padding: 0.5rem 1rem; /* Padding for hover effect */
 }
+.user-info {
+  color: #fff; /* Match the text color with the navbar */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  padding: 0.5rem 1rem; /* Match the padding with navbar items */
+  font-size: 1rem; /* Ensure the font size is consistent */
+}
+.user-info span {
+  margin-right: 0.5rem; /* Add some space between the welcome message and the button */
+}
+
 
 .btn-outline-success {
   color: #fff; /* Text color */

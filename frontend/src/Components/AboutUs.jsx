@@ -21,7 +21,7 @@ function AboutUs() {
 
   return (
     <div className="about-us-placeholder">
-      <section className="about-us-section">
+      <section className="about-us-section" id='about-us-section'>
         <div className="container my-5">
           <h3 className="mb-3">{aboutContent.title}</h3>
           <div className="row">

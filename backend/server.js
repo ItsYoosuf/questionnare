@@ -6,6 +6,7 @@ import { getNewsItems } from './Controllers/NewsSection.js'; // Adjust the path 
 import { getEvents } from './Controllers/Events.js';
 import authController from './Controllers/authController.js';
 import bodyParser from 'body-parser';
+import 'dotenv/config';
 const app = express();
 const corsOptions = {
     origin: 'http://localhost:3000', // Adjust this to match your client's origin

@@ -14,22 +14,22 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/about-us">About Us</Link>
+              <Link className="nav-link" to="/">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/news">News</Link>
+              <Link className="nav-link" to="/">News</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/events">Events</Link>
+              <Link className="nav-link" to="/">Events</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/gallery">Gallery</Link>
+              <Link className="nav-link" to="/">Gallery</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/certificates">Certificates</Link>
+              <Link className="nav-link" to="/courses">Certificates</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link" to="/">Contact</Link>
             </li>
           </ul>
           <div className="navbar-links">

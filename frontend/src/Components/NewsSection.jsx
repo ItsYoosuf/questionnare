@@ -17,7 +17,7 @@ function NewsSection() {
   }, []); // Empty dependency array means this effect runs once on mount  
 
   return (
-    <section className="news-section mt-5">
+    <section className="news-section mt-5" id='news-section'>
       <div className="container my-5">
       <h4>News</h4>
         <div className="row">
