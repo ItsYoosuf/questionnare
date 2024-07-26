@@ -1,4 +1,5 @@
-import React, { useContext, Fragment, memo } from 'react';
+import React, { useContext, Fragment, memo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Assets/styles/Courses.css';
 import { UserContext } from '../Contexts/Usercontext'; // Adjust based on your project structure
@@ -8,30 +9,35 @@ import Navbar from './navbar';
 
 export const Courses = memo(function CertificationPage(props) {
   const { user } = useContext(UserContext); // Destructure to get user object from context
+  const navigate = useNavigate();
   console.log(user);
-    const certifications = [
-        {
-          title: 'Donec blandit dignissim neque.',
-          description: 'Proin enim nisl, aliquet sit amet fermentum a, mattis non enim. In et velit non eros consectetur porta. Nullam volutpat dolor augue, vitae volutpat nulla consequat tristique. Suspendisse bibendum felis.',
-          duration: '6 months',
-          rating: '4.5',
-          views: '1,36,436'
-        },
-        {
-          title: 'Donec blandit dignissim neque.',
-          description: 'Proin enim nisl, aliquet sit amet fermentum a, mattis non enim. In et velit non eros consectetur porta. Nullam volutpat dolor augue, vitae volutpat nulla consequat tristique. Suspendisse bibendum felis.',
-          duration: '6 months',
-          rating: '4.5',
-          views: '1,36,436'
-        },
-        {
-          title: 'Donec blandit dignissim neque.',
-          description: 'Proin enim nisl, aliquet sit amet fermentum a, mattis non enim. In et velit non eros consectetur porta. Nullam volutpat dolor augue, vitae volutpat nulla consequat tristique. Suspendisse bibendum felis.',
-          duration: '6 months',
-          rating: '4.5',
-          views: '1,36,436'
-        }
-      ];
+  const [certifications, setCertifications] = useState([
+    {
+      id: 1,
+      title: 'Donec blandit dignissim neque.',
+      description: 'Proin enim nisl, aliquet sit amet fermentum a, mattis non enim. In et velit non eros consectetur porta. Nullam volutpat dolor augue, vitae volutpat nulla consequat tristique. Suspendisse bibendum felis.',
+      duration: '6 months',
+      rating: '4.5',
+      views: '1,36,436'
+    },
+    {
+      id: 2,
+      title: 'Donec blandit dignissim neque.',
+      description: 'Proin enim nisl, aliquet sit amet fermentum a, mattis non enim. In et velit non eros consectetur porta. Nullam volutpat dolor augue, vitae volutpat nulla consequat tristique. Suspendisse bibendum felis.',
+      duration: '6 months',
+      rating: '4.5',
+      views: '1,36,436'
+    },
+    {
+      id: 3,
+      title: 'Donec blandit dignissim neque.',
+      description: 'Proin enim nisl, aliquet sit amet fermentum a, mattis non enim. In et velit non eros consectetur porta. Nullam volutpat dolor augue, vitae volutpat nulla consequat tristique. Suspendisse bibendum felis.',
+      duration: '6 months',
+      rating: '4.5',
+      views: '1,36,436'
+    }
+  ]);
+
         // Function to add a course (simplified example)
         const handleAddCourse = () => {
           // Implement functionality to add a course
@@ -43,7 +49,10 @@ export const Courses = memo(function CertificationPage(props) {
           // Implement functionality to delete a course
           // This would involve sending the courseId to your backend to delete the course from the database
         };
-        console.log(user);
+        
+        const handleEditCourse = (courseId) => {
+          navigate(`/edit-course/${courseId}`);
+        };
   return (
     <Fragment>
         <Navbar/>
@@ -69,7 +78,9 @@ export const Courses = memo(function CertificationPage(props) {
                   <p className="card-text">{cert.description}</p>
                   <p className="card-text"><small className="text-muted">Duration: {cert.duration}</small></p>
                   <p className="card-text"><small className="text-muted">{cert.rating} ⭐ {cert.views} views</small></p>
-                  <button className="btn btn-success">Start</button>
+                  <button className="btn btn-success" onClick={() => user.role === 'Admin' ? handleEditCourse(cert.id) : null}>
+                  {user.role === 'Admin' ? 'Edit Course' : 'Start'}
+                  </button>
                 </div>
               </div>
             </div>

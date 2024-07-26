@@ -5,6 +5,7 @@ import { UserProvider } from './Contexts/Usercontext';
 import LandingPage from './Components/landingpage';
 import Signup from './Components/Signup'; // Import the Signup component
 import { Courses } from './Components/Courses'; // Import the Courses component
+import  EditCourse  from './Components/EditCourse'; // Import the EditCourse component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes along with BrowserRouter and Route
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/courses-admin" element={<Courses />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/edit-course/:courseId" element={<EditCourse/>} />
         </Routes>
       </div>
     </Router>
